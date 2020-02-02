@@ -1,0 +1,22 @@
+<div class="row">
+
+    <div class="col-md-4  py-5">
+        <div class=" brdr "> </div>
+
+        <h1 class="text-light py-5"> Popular Movies <br> Right Now</h1>
+        <p class="text-muted">Most Treanding Movies This Month</p>
+
+        <div class=" brdr "> </div>
+    </div>
+    <div *ngFor="let movie of TreandingMovie" class="col-md-2 my-2 position-relative">
+
+        <div class="movie position-relative">
+            <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" />
+
+            <h6 class="text-white my-2">{{movie.title == undefined ? movie.name:movie.title}}</h6>
+            <p class="text-white">  {{movie.overview}}</p>
+
+            <div class="vote">{{movie.vote_average}}</div>
+        </div>
+    </div>
+</div>

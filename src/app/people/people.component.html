@@ -1,0 +1,20 @@
+<div class="row">
+
+    <div class="col-md-4  py-5">
+        <div class=" brdr "> </div>
+
+        <h1 class="text-light py-5"> pepole Movies <br> Right Now</h1>
+        <p class="text-muted">Most Treanding pepole This Month</p>
+
+        <div class=" brdr "> </div>
+    </div>
+    <div *ngFor="let movie of Trendingperson" class="col-md-2 my-2 position-relative">
+
+        <div class="movie ">
+            <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/{{movie.profile_path}}" />
+
+            <h6 class="text-white my-2">{{movie.title == undefined ? movie.name:movie.title }}</h6>
+
+        </div>
+    </div>
+</div>
